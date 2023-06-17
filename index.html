@@ -3,9 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Bank</title>
+    <title>Onliine banking system</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0f18d31947.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    testing the host
+    
+    <div id="coin1"></div>
+    <div id="coin2"></div>
+    <header>
+        <a href="index.html">
+            <div id="logo"><img src="img/bank.png" id="logoIc">The Bank</div>
+        </a>
+        <div id="refs">
+            <a href="#customers" id="custsH"><i class="fa-solid fa-user-group"></i> Customers</a>
+            <a href="history.html"><i class="fa-solid fa-rectangle-list"></i> History</a>
+            <a href="https://www.xe.com/currencyconverter/"target="_blank" ><i class="fa-solid fa-money-bill-transfer"></i> Currency Converter</a>
+            <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+        </div>
+        <div id="refsH">
+            <a href="customers.html">Customers</a>
+            <a href="history.html">History</a>
+            <a href="https://www.xe.com/currencyconverter/">Currency converter</a>
+        </div>
+    </header>
+    <main>
+        <div id="page1">
+            Payments made easy
+            <div id="page1In">
+                <div id="tagline">
+                    <button id="custs">View Customers</button>
+                    <button id="history">View Transaction History</button>
+                    <button id="profile">View Profile</button>
+                </div>
+                <img src="img/mainImg.png" width="60%">
+            </div>
+        </div>
+        <div id="about">
+            <div id="about1">
+                <h1>About</h1>
+                <div id="about1In">
+                    <img src="img/about.png" width="50%" min-width="400px">
+                    <p>
+                        Introducing an online basic banking system that helps making payments easy.
+                        Now you can transfer money from anywhere really easy.
+                        Just simply tap on the person you want to send funds, and enter their email and amount to be transfered.
+                        Tap on the Send button and its done!
+                    </p>
+                </div>
+                <p>
+                    This was developed solely for an internship project. There is no actual money transfer happening.
+                    Names and other details mentioned in the customers' table is completely random.
+                    None of the persons listed in that table represents an existing real person.
+                </p>
+            </div>
+        </div>
+    </main>
+    <div id="customers">
+        <div id="control">
+            <div id="dummy"></div>
+            Customers
+            <button id="close"><i class="fa-solid fa-close"></i></button>
+        </div>
+        <div id="viewPage">
+            <div id="control2">
+                <div id="dummy"></div>
+                Customer
+                <button id="close2"><i class="fa-solid fa-close"></i></button>
+            </div>
+            <div id="content">
+
+            </div>
+        </div>
+        
+        <div id="transferPage"></div>
+        <div id="tableD">
+            <table id="table">
+                <tr>
+                    <td>Sr.No.</td>
+                    <td>Name</td>
+                    <td>Email id</td>
+                    <td>Balance</td>
+                    <td>Actions</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="viewPr">
+        <div id="control3">
+            <div id="dummy"></div>
+            Your Profile
+            <button id="close3"><i class="fa-solid fa-close"></i></button>
+        </div>
+        <div id="content">
+            <div id="profilePic">
+                <img src="img/user.png" style="width:300px;border-radius:50%;border:1px black solid"><br>
+            </div>
+            <div id="details">
+                <p>Name: Rahul Panchal</p>
+                <p>Email: rm5901960@gmail.com</p>
+                <p>Account no.: 210130111009</p>
+                <p style="color: green">Balance: $999999</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer1">
+            Support us on
+            <div id="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div id="footer2">
+            Designed and Developed by <a id="footerName" href="">Rahul Panchal</a>
+            &copy;2023
+        </div>
+        <div id="footer3">
+            Credits:
+            <ul>
+                <li><a href="https://www.flaticon.com/free-icons/bank" title="bank icons">Bank icons created by Freepik - Flaticon</a></li>
+                <li><a target="_blank" href="https://icons8.com/icon/81068/dollar-coin">Dollar Coin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
+                <li><a href="https://www.freepik.com/free-vector/people-using-mobile-bank-remittance-money_9176210.htm#query=online%20banking&position=7&from_view=keyword&track=ais">Image by pch.vector</a> on Freepik</li>
+            </ul>
+        </div>
+    </footer>
 </body>
+<script src="main.js"></script>
 </html>
