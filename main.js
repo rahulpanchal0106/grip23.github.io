@@ -4,12 +4,14 @@ var custsBtn = document.getElementById("custs");
 var custsBtnH = document.getElementById("custsH");
 function close(){
     let custsTable = document.getElementById("customers");
-    custsTable.style.top="-100vh";
+    custsTable.style.top="-150vh";
+    custsTable.style.visibility="hidden";
     custsBtnH.style.textDecoration="none";
 }
 function open(){
     let custsTable = document.getElementById("customers");
     custsTable.style.top="0vh";
+    custsTable.style.visibility="visible";
     custsBtnH.style.textDecoration="underline";
 }
 closeBtn.onclick=()=>{
@@ -88,7 +90,7 @@ let acno=[
 function view(index) {
     let viewPage = document.getElementById("viewPage");
     let vpContent=document.getElementById("content");
-    viewPage.style.display = "flex";
+    viewPage.style.visibility="visible";
     viewPage.style.left="15vw";
     vpContent.innerHTML = `
     <div id="profilePic">
@@ -106,7 +108,8 @@ function view(index) {
         let viewPage = document.getElementById("viewPage");
         let vpContent=document.getElementById("content");
         vpContent.innerHTML=" ";
-        viewPage.style.left="-100vw";
+        viewPage.style.visibility="hidden";
+        viewPage.style.left="-150vw";
     }
     closeBtn2.onclick=()=>{
         close2();
@@ -145,13 +148,15 @@ table.innerHTML += `
 var profileBtn = document.getElementById("profile");
 profileBtn.onclick=()=>{
     let viewPage = document.getElementById("viewPr");
+    viewPage.style.visibility="visible";
     viewPage.style.left="15vw";
     var closeBtn3 = document.getElementById("close3");
     function close3(){
         let viewPage = document.getElementById("viewPr");
         let vpContent=document.getElementById("content");
         vpContent.innerHTML=" ";
-        viewPage.style.left="120vw";
+        viewPage.style.visibility="hidden";
+        viewPage.style.left="150vw";
     }
     closeBtn3.onclick=()=>{
         close3();

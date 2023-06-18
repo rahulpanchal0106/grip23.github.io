@@ -21,6 +21,7 @@ body{
     color: black;
     margin: 0px;
     padding: 0px;
+    width: 100%;
     overflow-x: hidden;
 }
 #coin1,#coin2{
@@ -203,12 +204,13 @@ footer{
     height: 100vh;
     background-color: rgba(85, 133, 158, 0.865);
     display: flex;
+    visibility:  ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     background-color: #99999950;
-    top: -100vh;
+    top: -150vh;
     position: fixed;
     backdrop-filter: blur(6px);
 }
@@ -317,7 +319,7 @@ table td{
     width: 70%;
     height:80vh;
     top: 15vh;
-    left:100vw;
+    left:150vw;
     font-size: 1.6rem;
     backdrop-filter: blur(20px);
     background-color: rgba(210, 210, 210, 0.806);
@@ -349,4 +351,23 @@ table td{
     z-index: 15;
 }
 
-  
+@media only screen and (max-width: 1100px){
+    *{
+        font-size: 1rem;
+    }
+    #coin1,#coin2{
+        width: 70px;
+        height: 70px;
+    }
+    #logo{
+        font-size: 1.5rem;
+        width: 150px;
+    }
+    #logoIc{
+        width: 40px;
+    }
+    table{
+        font-size: 0.8rem;
+        
+    }
+}
