@@ -168,6 +168,7 @@ function transfer(index) {
 
     tpContent.innerHTML = `
     <div id="senderDetails">
+        <h5>Sender</h5>
         <p>Name: The Sparks Foundation</p>
         <p>Email: rm5901960@gmail.com</p>
         <p>Account No.: 210130111009</p>
@@ -179,6 +180,7 @@ function transfer(index) {
         <i class="fa-solid fa-circle-xmark" id="cross"></i>
     </p>
     <div id="recieverDetails">
+        <h5>Reciever</h5>
         <p id="rname">Name: ${names[index]}</p>
         <p id="remail">Email: ${emails[index]}@gmail.com</p>
         <p id="racno">Account No.: ${acno[index]}</p>

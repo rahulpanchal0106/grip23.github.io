@@ -430,7 +430,7 @@ table td{
     justify-content: space-around;
     align-items: center;
     width: 45%;
-    height: 80%;
+    height: 70%;
 }
 #recieverDetails{
     display: flex;
@@ -438,7 +438,7 @@ table td{
     justify-content: space-around;
     align-items: center;
     width: 45%;
-    height: 80%;
+    height: 70%;
 }
 
 #close4:hover{
