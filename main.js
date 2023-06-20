@@ -120,7 +120,6 @@ var currBal = 999999;
 var currBalVi=document.getElementById("myCurrBal");
 currBalVi.innerHTML=`$${currBal}`;
 function transfer(index) {
-    // var balanceTab=document.getElementById("bal");
     let transferPage = document.getElementById("transferPage");
     let tpContent=document.getElementById("contentTransfer");
     transferPage.style.visibility="visible";
