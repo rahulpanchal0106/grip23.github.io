@@ -24,6 +24,9 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
+p{
+    font-size: 1.2rem;
+}
 #coin1,#coin2{
     background-image: url(img/coin.png);
     width: 100px;
@@ -35,11 +38,11 @@ body{
 }
 #coin1{
     top: 14vh;
-    left: 7vw;
+    left: 7%;
 }
 #coin2{
     bottom: 6vh;
-    right: 6vw;
+    right: 6%;
 }
 header{
     background-color: #333;
@@ -90,7 +93,7 @@ header{
     background-color: #22222200;
 }
 #refs a:hover{
-    box-shadow: #333 0px 30px 0px;
+    box-shadow: #333 0px 35px 0px;
 }
 a{
     text-decoration: none;
@@ -163,9 +166,9 @@ main{
     height: 100vh;
     background-color: rgba(85, 133, 158, 0.865);
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: 1.5rem;
 }
 #about1{
@@ -204,7 +207,6 @@ footer{
     height: 100vh;
     background-color: rgba(85, 133, 158, 0.865);
     display: flex;
-    visibility:  ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -223,6 +225,8 @@ footer{
     align-items: center;
     padding: 20px 0px;
     margin-top: 20px;
+    position: relative;
+    top: 100px;
 }
 #self{
     display: flex;
@@ -233,17 +237,30 @@ footer{
     background-color: #ffffff00;
     border: none;
     border-radius: 10px;
+    aspect-ratio: 1/1;
     font-size: 1.7rem;
     padding: 3px 10px;
     height: 50px;
 }
 #close:hover{
-    background-color: #ffffff50;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+#tableD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 90%;
+    font-size: 1rem;
+    overflow: auto;
 }
 #customers table{
-    width: 100%;
     border-radius: 10px;
     overflow: auto;
+    width: 50%;
+    position: absolute;
+    bottom: 40px;
 }
 table td{
     background-color: rgba(210, 210, 210, 0.806);
@@ -260,11 +277,12 @@ table td{
     width: 70%;
     height:80vh;
     top: 15vh;
-    left:-100vw;
+    left:-200%;
     backdrop-filter: blur(20px);
-    background-color: rgba(210, 210, 210, 0.806);
+    background-color: rgb(210, 210, 210);
     border-radius: 10px;
     box-shadow: #444 10px 20px 200px;
+    z-index: 10;
 }
 #content{
     width: 100%;
@@ -276,8 +294,8 @@ table td{
     margin-bottom: 50px;
 }
 #profilePic img{
-    box-shadow: rgb(135, 135, 135) -10px 10px 0px;
-    size: contain;
+    aspect-ratio: 1/1;
+    box-shadow: rgba(135, 135, 135, 0.285) -10px 10px 0px;
 }
 #details{
     display: flex;
@@ -288,7 +306,8 @@ table td{
     height: 80%;
 }
 #close2:hover{
-    background-color: #ffffff50;
+    background-color: #ffffff;
+    border-radius: 50%;;
 }
 #control2 {
     display: flex;
@@ -303,6 +322,7 @@ table td{
 #close2 {
     background-color: #ffffff00;
     border: none;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     font-size: 1.7rem;
     color:rgb(0, 0, 0);
@@ -319,16 +339,16 @@ table td{
     width: 70%;
     height:80vh;
     top: 15vh;
-    left:150vw;
+    left:-200%;
     font-size: 1.6rem;
-    backdrop-filter: blur(20px);
-    background-color: rgba(210, 210, 210, 0.806);
+    background-color: rgb(210, 210, 210);
     border-radius: 10px;
     box-shadow: #444 10px 20px 200px;
 }
 
 #close3:hover{
-    background-color: #ffffff50;
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 #control3 {
     display: flex;
@@ -341,6 +361,7 @@ table td{
 }
   
 #close3 {
+    aspect-ratio: 1/1;
     background-color: #ffffff00;
     border: none;
     border-radius: 10px;
@@ -351,10 +372,191 @@ table td{
     z-index: 15;
 }
 
+#transferPage{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    width: 70%;
+    height:80vh;
+    top: 15vh;
+    left:-200%;
+    font-size: 1.6rem;
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: #444 10px 20px 200px;
+    z-index: 10;
+}
+#control4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    padding: 20px 0px;
+    margin-top: 20px;
+}
+#close4 {
+    aspect-ratio: 1/1;
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    color:rgb(0, 0, 0);
+    padding: 3px 10px;
+    height: 50px;
+    z-index: 15;
+}
+#contentTransfer{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#check{
+    display: none;
+}
+#cross{
+    display: none;
+}
+#senderDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    height: 80%;
+}
+#recieverDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    height: 80%;
+}
+
+#close4:hover{
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+#trBack{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    width: 100%;
+    height:100vh;
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: #444 10px 20px 200px;
+    z-index: 10;
+
+}
+#trHistory{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 70%;
+    height:80vh;
+    top: 15vh;
+    left:-200%;
+    font-size: 1.6rem;
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: #444 10px 20px 200px;
+    overflow: auto;
+}
+#control5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    padding: 0px 0px;
+    margin-top: 20px;
+}
+#contentHistory{
+    margin-top: 50px;
+    padding: 20px 20px 0px 20px;
+    overflow: auto;
+}
+#close5 {
+    aspect-ratio: 1/1;
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    color:rgb(0, 0, 0);
+    padding: 3px 10px;
+    height: 50px;
+    z-index: 15;
+}
+#close5:hover{
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+#inputSum{
+    width: 60%;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    
+}
+#sum{
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 40px;
+    border: 1px black solid;
+    width: 80%;
+}
+#sum::-webkit-inner-spin-button{
+    display: none;
+}
+#send{
+    padding: 10px 0px;
+    font-size: 1.2rem;  
+    border-radius: 40px;
+    background-color: #333;
+    color: #999;
+    width: 15%;
+}
+#send:hover{
+    background-color: #bebebe;
+    color: #111;
+    border-radius: 3px;
+    border: 1px #000000 solid;
+}
+#btnCov{
+    
+}
+#viewBtn,#transferBtn{
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px #ffffff solid;
+}
+#viewBtn:hover,#transferBtn:hover{
+    background-color: #bebebe;
+    color: #111;
+    border-radius: 6px;
+    border: 1px #000000 solid;
+}
 @media only screen and (max-width: 1100px){
-    *{
-        font-size: 1rem;
-    }
     #coin1,#coin2{
         width: 70px;
         height: 70px;
@@ -366,8 +568,81 @@ table td{
     #logoIc{
         width: 40px;
     }
-    table{
+    #refs{
+        display: none;
+    }
+    #refsH{
+        display: flex;
         font-size: 0.8rem;
-        
+        flex-direction: column;
+
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    #control{
+        position: absolute;
+        top: 20px;
+    }
+    #tableD{
+        font-size: 0.8rem;
+        width: 80%;
+        overflow: auto;
+        margin-top: 110px;
+    }
+    #customers table{
+        width: 50%;
+        height: 70vh;
+        overflow: auto;
+        position: relative;
+    }
+    td{
+        font-size: 0.7rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    #page1In{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #content{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #prImg{
+        width: 100px;
+    }
+    #profilePic{
+        aspect-ratio: 1/1;
+        box-shadow: rgb(135, 135, 135) -10px 10px 0px;
+        overflow: hidden;
+        display: flex;
+        border-radius: 50%;
+        justify-content:center;
+        align-items: center;
+        size: contain;
+    }
+    #about{
+        justify-content: flex-start;
+    }
+    #about h1{
+        margin-bottom: 130px;
+    }
+    #about1In{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #control5 h2{
+        font-size: 1.6rem;
+    }
+    #control4 h1{
+        font-size: 1.6rem;
+    }
+    footer{
+        font-size: 0.7rem;
     }
 }

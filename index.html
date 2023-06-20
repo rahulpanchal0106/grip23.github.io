@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onliine banking system</title>
+    <title>Online banking system</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0f18d31947.js" crossorigin="anonymous"></script>
@@ -18,13 +18,13 @@
         </a>
         <div id="refs">
             <a href="#customers" id="custsH"><i class="fa-solid fa-user-group"></i> Customers</a>
-            <a href="history.html"><i class="fa-solid fa-rectangle-list"></i> History</a>
+            <a href="#trHistory" id="historyH"><i class="fa-solid fa-rectangle-list"></i> History</a>
             <a href="https://www.xe.com/currencyconverter/"target="_blank" ><i class="fa-solid fa-money-bill-transfer"></i> Currency Converter</a>
             <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
         </div>
         <div id="refsH">
             <a href="customers.html">Customers</a>
-            <a href="history.html">History</a>
+            <a href="#trHistory">History</a>
             <a href="https://www.xe.com/currencyconverter/">Currency converter</a>
         </div>
     </header>
@@ -41,8 +41,9 @@
             </div>
         </div>
         <div id="about">
+            <h1>About</h1>
             <div id="about1">
-                <h1>About</h1>
+                
                 <div id="about1In">
                     <img src="img/about.png" width="50%" min-width="400px">
                     <p>
@@ -63,13 +64,13 @@
     <div id="customers">
         <div id="control">
             <div id="dummy"></div>
-            Customers
+            <h1></h1>
             <button id="close"><i class="fa-solid fa-close"></i></button>
         </div>
         <div id="viewPage">
             <div id="control2">
                 <div id="dummy"></div>
-                Customer
+                <h1>Customer</h1>
                 <button id="close2"><i class="fa-solid fa-close"></i></button>
             </div>
             <div id="content">
@@ -77,36 +78,65 @@
             </div>
         </div>
         
-        <div id="transferPage"></div>
+        <div id="transferPage">
+            <div id="control4">
+                <div id="dummy"></div>
+                <h3>Transfer Money With Ease</h3>
+                <button id="close4"><i class="fa-solid fa-close"></i></button>
+            </div>
+            <div id="inputSum">
+                <input type="number" id="sum" placeholder="Enter amount to be transfered">
+                <button id="send">Send <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <div id="contentTransfer">
+
+            </div>
+        </div>
         <div id="tableD">
             <table id="table">
                 <tr>
                     <td>Sr.No.</td>
                     <td>Name</td>
-                    <td>Email id</td>
-                    <td>Balance</td>
+                    <td>Email Id</td>
+                    <td>Account No.</td>
                     <td>Actions</td>
                 </tr>
             </table>
         </div>
     </div>
+    
+    
     <div id="viewPr">
         <div id="control3">
             <div id="dummy"></div>
-            Your Profile
+            <h1>Your Profile</h1>
             <button id="close3"><i class="fa-solid fa-close"></i></button>
         </div>
         <div id="content">
             <div id="profilePic">
-                <img src="img/user.png" style="width:300px;border-radius:50%;border:1px black solid"><br>
+                <img src="img/user.png" id="prImg" style="width:250px;border-radius:50%;border:1px black solid"><br>
             </div>
             <div id="details">
-                <p>Name: Rahul Panchal</p>
+                <p>Name: The Sparks Foundation</p>
                 <p>Email: rm5901960@gmail.com</p>
-                <p>Account no.: 210130111009</p>
-                <p style="color: green">Balance: $999999</p>
+                <p>Account No.: 210130111009</p>
+                <p style="color: green" id="myCurrBal"></p>
             </div>
         </div>
+    </div>
+    <div id="trHistory">
+        <div id="control5">
+            <div id="dummy"></div>
+            <h2>Transaction History</h2>
+            <button id="close5"><i class="fa-solid fa-close"></i></button>
+        </div>
+        <div id="contentHistory">
+            <p id="notr">
+                There is no transaction history yet.
+            </p>
+        </div>
+    </div>
+    
     </div>
     <footer>
         <div id="footer1">
@@ -118,7 +148,7 @@
             </div>
         </div>
         <div id="footer2">
-            Designed and Developed by <a id="footerName" href="">Rahul Panchal</a>
+            Designed and Developed by <a id="footerName" href="">The Sparks Foundation</a>
             &copy;2023
         </div>
         <div id="footer3">
