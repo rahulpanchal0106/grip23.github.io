@@ -1,4 +1,4 @@
-# grip23.github.io
+
 # Basic Banking System
 * Made an online platform to transfer money and funds through The Bank.
 * A project to practice dynamic website design and development.
