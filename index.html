@@ -18,19 +18,28 @@
         </a>
         <div id="refs">
             <a href="#customers" id="custsH"><i class="fa-solid fa-user-group"></i> Customers</a>
-            <a href="#trHistory" id="historyH"><i class="fa-solid fa-rectangle-list"></i> History</a>
+            <a id="historyH"><i class="fa-solid fa-rectangle-list"></i> History</a>
             <a href="https://www.xe.com/currencyconverter/"target="_blank" ><i class="fa-solid fa-money-bill-transfer"></i> Currency Converter</a>
             <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
         </div>
+        <button id="open-menu"><i class="fa-solid fa-bars"></i></button>
         <div id="refsH">
-            <a href="customers.html">Customers</a>
-            <a href="#trHistory">History</a>
-            <a href="https://www.xe.com/currencyconverter/">Currency converter</a>
+            <div id="menu-control">
+                <button id="close-menu"><i class="fa-solid fa-close"></i></button>
+            </div>
+            <div id="menu-links">
+                <a href="#customers" id="custsHM"><i class="fa-solid fa-user-group"></i> Customers</a>
+                <a id="historyHM"><i class="fa-solid fa-rectangle-list"></i> History</a>
+                <a href="https://www.xe.com/currencyconverter/" id="converterHM" target="_blank" ><i class="fa-solid fa-money-bill-transfer"></i> Currency Converter</a>
+                <a href="#about" id="aboutHM"><i class="fa-solid fa-circle-info"></i> About</a>
+            </div>
         </div>
     </header>
     <main>
         <div id="page1">
-            Payments made easy
+            <h1 id="title">
+                Payments made easy
+            </h1>
             <div id="page1In">
                 <div id="tagline">
                     <button id="custs">View Customers</button>
@@ -97,8 +106,8 @@
                 <tr>
                     <td>Sr.No.</td>
                     <td>Name</td>
-                    <td>Email Id</td>
-                    <td>Account No.</td>
+                    <td id="emailsHTML">Email Id</td>
+                    <td id="acnoHTML">Account No.</td>
                     <td>Actions</td>
                 </tr>
             </table>
@@ -140,8 +149,9 @@
     </div>
     <footer>
         <div id="footer1">
-            Support us on
+            
             <div id="socials">
+                <p>Support us on</p>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>

@@ -11,6 +11,7 @@ function close(){
 function open(){
     let custsTable = document.getElementById("customers");
     custsTable.style.top="0vh";
+    custsTable.style.left="0%";
     custsTable.style.visibility="visible";
     custsBtnH.style.textDecoration="underline";
 }
@@ -24,7 +25,11 @@ custsBtn.onclick=()=>{
 custsBtnH.onclick=()=>{
     open();
 }
-
+let custsHM = document.getElementById("custsHM");
+custsHM.onclick=()=>{
+    closeMenu();
+    open();
+}
 //table
 let names=[
     "Roronoa Zoro",
@@ -168,8 +173,8 @@ function transfer(index) {
     tpContent.innerHTML = `
     <div id="senderDetails">
         <h5>Sender</h5>
-        <p>Name: The Sparks Foundation</p>
-        <p>Email: rm5901960@gmail.com</p>
+        <p>The Sparks Foundation</p>
+        <p id="emails">Email: rm5901960@gmail.com</p>
         <p>Account No.: 210130111009</p>
         <p style="color: green">Balance: $${currBal}</p>
     </div>
@@ -180,8 +185,8 @@ function transfer(index) {
     </p>
     <div id="recieverDetails">
         <h5>Reciever</h5>
-        <p id="rname">Name: ${names[index]}</p>
-        <p id="remail">Email: ${emails[index]}@gmail.com</p>
+        <p id="rname">${names[index]}</p>
+        <p id="remail" class="emails">Email: ${emails[index]}@gmail.com</p>
         <p id="racno">Account No.: ${acno[index]}</p>
         <p style="color: green" id="rbal">Balance: $${bal[index]}</p>
     </div>
@@ -251,8 +256,8 @@ table.innerHTML += `
     <tr>
     <td>${i}</td>
     <td>${names[index]}</td>
-    <td>${emails[index]}@gmail.com</td>
-    <td>${acno[index]}</td>
+    <td id="emails">${emails[index]}@gmail.com</td>
+    <td id="acno">${acno[index]}</td>
     <td id="btnCov">
         <button data-index="${index}" class="view-btn" id="viewBtn">View</button>
         <button data-index="${index}" class="transfer-btn" id="transferBtn">Transfer</button>
@@ -284,8 +289,13 @@ profileBtn.onclick=()=>{
 
 var historyBtn = document.getElementById("history");
 var historyBtnH = document.getElementById("historyH");
+let historyHM = document.getElementById("historyHM");
 historyBtn.onclick=()=>{openHistory()};
 historyBtnH.onclick=()=>{openHistory()};
+historyHM.onclick=()=>{
+    closeMenu();
+    openHistory()
+};
 function openHistory(){
     let historyPage = document.getElementById("trHistory");
     historyPage.style.visibility="visible";
@@ -299,4 +309,35 @@ function openHistory(){
     closeBtn5.onclick=()=>{
         close5();
     }
+}
+
+// Hamburger menu
+
+function openMenu(){
+    let menu = document.getElementById("refsH");
+    menu.style.top="0vh";
+    
+    
+}
+function closeMenu(){
+    let menu = document.getElementById("refsH");
+    menu.style.top="-100vh";
+}
+let openBtn = document.getElementById("open-menu");
+
+ 
+openBtn.onclick=()=>{
+    openMenu();
+}
+let closeMenuBtn = document.getElementById("close-menu");
+closeMenuBtn.onclick=()=>{
+    closeMenu();
+}
+let aboutHM = document.getElementById("aboutHM");
+aboutHM.onclick=()=>{
+    closeMenu();
+}
+let convHM = document.getElementById("converterHM");
+convHM.onclick=()=>{
+    closeMenu();
 }

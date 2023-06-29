@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Caveat:wght@400;700&family=Dancing+Script&family=Exo&family=Fira+Sans:wght@300&family=Lato&family=Lobster&family=Playfair&family=Playfair+Display&family=Quicksand&family=Tangerine&family=Titan+One&family=VT323&display=swap');
 html{
     scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
 }
 html::-webkit-scrollbar {
     width:0.5em;
@@ -106,8 +109,10 @@ a:visited{
     color: #fff;
     text-decoration: underline;
 }
+#open-menu{
+    display: none;
+}
 main{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -383,7 +388,7 @@ table td{
     text-align: center;
     justify-content:center;
     width: 70%;
-    height:80vh;
+    height:73.5vh;
     top: 15vh;
     left:-200%;
     font-size: 1.6rem;
@@ -391,6 +396,7 @@ table td{
     border-radius: 10px;
     box-shadow: #444 10px 20px 200px;
     z-index: 10;
+    padding: 2%;
 }
 #control4 {
     display: flex;
@@ -401,6 +407,19 @@ table td{
     padding: 20px 0px;
     margin-top: 20px;
 }
+#control4 h3{
+    font-size: 1.5rem;
+}
+#inputSum #sum{
+    width: 35%;
+    font-size: 0.8rem;
+}
+#inputSum #send{
+    width: 45%;
+    font-size: 1rem;
+    border: 1px white solid;
+}
+
 #close4 {
     aspect-ratio: 1/1;
     background-color: #ffffff00;
@@ -569,6 +588,9 @@ table td{
     #logoIc{
         width: 40px;
     }
+    #title{
+        font-size: 1.8rem;
+    }
     #refs{
         display: none;
     }
@@ -576,7 +598,81 @@ table td{
         display: flex;
         font-size: 0.8rem;
         flex-direction: column;
-
+        position: absolute;
+        top: -100vh;
+        left: 0px;
+        background-color: #333;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 25;
+    }
+    #acno,#acnoHTML{
+        display: none;
+    }
+    #emails,#emailsHTML,.emails{
+        display: none;
+    }
+    #open-menu{
+        display: flex;
+        background-color: #333;
+        color: white;
+        border-radius: 2px;
+        border: 1px white solid;
+        padding: 2px;
+        margin-right: 10px;
+    }
+    #open-menu:hover{
+        background-color: #bebebe;
+        color: #111;
+        border-radius: 3px;
+        border: 1px #000000 solid;
+    }
+    #close-menu{
+        background-color: #333;
+        color: white;
+        border-radius: 2px;
+        border: 1px white solid;
+        padding: 2px 6px;
+        margin-right: 10px;
+    }
+    #btnCov{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+        height: 100%;
+    }
+    #btnCov button{
+        font-size: 0.6rem;
+    }
+    #close-menu:hover{
+        background-color: #bebebe;
+        color: #111;
+        border-radius: 3px;
+        border: 1px #000000 solid;
+    }
+    #menu-control{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0px;
+        justify-content:end;
+        align-items: center;
+        width: 100%;
+        padding: 30px;
+        height: 10vh;
+    }
+    #menu-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+        font-size: 1.5rem;
     }
     p{
         font-size: 1.2rem;
@@ -591,11 +687,18 @@ table td{
         overflow: auto;
         margin-top: 110px;
     }
+    
     #customers table{
         width: 50%;
         height: 70vh;
         overflow: auto;
         position: relative;
+    }
+    #viewPage{
+        padding: 2%;
+    }
+    #viewPage h1{
+        font-size: 1.9rem;
     }
     td{
         font-size: 0.7rem;
@@ -613,6 +716,12 @@ table td{
         justify-content: center;
         text-align: center;
     }
+    #viewPr{
+        padding: 1%;
+    }
+    #viewPr h1{
+        font-size: 1.9rem;
+    }
     #prImg{
         width: 100px;
     }
@@ -627,6 +736,7 @@ table td{
         size: contain;
     }
     #about{
+        padding-top: 50px;
         justify-content: flex-start;
     }
     #about h1{
@@ -643,7 +753,19 @@ table td{
     #control4 h1{
         font-size: 1.6rem;
     }
+
+
     footer{
-        font-size: 0.7rem;
+        height: 35vh;
+        font-size: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #socials a i{
+        font-size: 1.2rem;
+    }
+    #contentHistory{
+        height: 70%;
     }
 }
